@@ -1,72 +1,94 @@
 # Real Estate Listing Portal
 
-## Pages & Features
+Property listing, search, and real estate showcasing.
 
-### 1. Landing Page (Public)
-- Featured properties carousel
-- Search bar with location, type, price range, bedrooms
-- Property type quick filters (buy, rent, commercial)
-- Neighborhood highlights
-- Agent spotlight
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Search & Results
-- Map + list split view
-- Advanced filters (price, area, bedrooms, amenities, year built)
-- Sort by price, date, popularity
-- Save search & set alerts
-- Pagination / infinite scroll
+## Tech Stack
 
-### 3. Property Detail (Public)
-- Photo gallery with lightbox
-- Virtual tour / 360° view embed
-- Property info: price, area, rooms, amenities, description
-- Floor plan viewer
-- Location map with nearby places (schools, transport, shops)
-- Mortgage calculator widget
-- Contact agent form
-- Similar properties suggestions
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Agent Dashboard
-- My listings overview (active, pending, sold/rented)
-- Inquiry inbox & lead management
-- Performance stats (views, inquiries, conversions)
-- Appointment calendar
+## Getting Started
 
-### 5. Listing Management
-- Create / edit property listing
-- Upload photos, floor plans, documents
-- Set pricing, availability, and listing type
-- Publish / unpublish / archive listing
-- Listing quality score & suggestions
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Leads & Inquiries
-- Inquiry list with status (new, contacted, viewing, negotiating, closed)
-- Lead detail: contact info, interested property, notes
-- Schedule property viewing
-- Follow-up reminders
+## License
 
-### 7. Agents / Team
-- Agent directory with profile, specialization, ratings
-- Agent profile page with bio, listings, reviews
-- Commission tracking
-- Performance leaderboard
+MIT © Mehdi Nabhani
 
-### 8. Clients (Buyers / Tenants)
-- Client directory with preferences (budget, location, type)
-- Match clients to properties
-- Favorite / shortlisted properties per client
-- Communication history
+---
 
-### 9. Reports
-- Listing performance (views, inquiries per listing)
-- Market trends (avg price, time on market)
-- Agent performance comparison
-- Lead conversion funnel
-- Export as PDF / CSV
+<details>
+<summary>📋 Original Feature Spec</summary>
 
-### 10. Settings
-- Agency profile & branding
-- Listing categories & amenities configuration
-- Email notification templates
-- SEO settings per listing
-- User roles & permissions
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
